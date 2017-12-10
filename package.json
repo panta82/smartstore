@@ -1,0 +1,22 @@
+{
+  "name": "smartstore",
+  "version": "1.0.0",
+  "description": "Smart node.js store, with persistence.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panta82/smartstore.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/panta82/smartstore/issues"
+  },
+  "homepage": "https://github.com/panta82/smartstore#readme"
+}
