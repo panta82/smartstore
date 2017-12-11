@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/panta82/smartstore/issues"
   },
-  "homepage": "https://github.com/panta82/smartstore#readme"
+  "homepage": "https://github.com/panta82/smartstore#readme",
+  "dependencies": {
+    "lodash.isstring": "^4.0.1"
+  }
 }

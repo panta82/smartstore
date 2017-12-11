@@ -8,4 +8,13 @@ store.test = {
 	c: /abc/i
 };
 
+store.items = [];
+store.items.push({
+	a: {
+		b: {
+			c: 1
+		}
+	}
+});
+
 store.flush = 5;
