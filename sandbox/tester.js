@@ -1,4 +1,4 @@
-const {SmartStore} = require('../lib/smart_store');
+const SmartStore = require('../index');
 
 const s1 = new SmartStore('/tmp/test.store');
 s1.openSync();
