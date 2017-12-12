@@ -7,14 +7,25 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --recursive spec"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/panta82/smartstore.git"
   },
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "store",
+    "persistence",
+    "persistnt",
+    "object",
+    "data",
+    "save",
+    "database",
+    "easy",
+    "dirty"
+  ],
+  "author": "panta82",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/panta82/smartstore/issues"
   },
