@@ -1,6 +1,12 @@
 const {SmartStore} = require('../lib/smart_store');
 
-const store = SmartStore.open('/tmp/store.dat');
+const s1 = new SmartStore('/tmp/test.store');
+s1.openSync();
+
+const store = SmartStore.openSync({
+	path: '/tmp/store.dat',
+	log: console.log
+});
 
 store.test = {
 	a: 'a',
@@ -9,12 +15,17 @@ store.test = {
 };
 
 store.items = [];
-store.items.push({
-	a: {
-		b: {
-			c: 1
-		}
-	}
-});
 
-store.flush = 5;
+setTimeout(() => {
+	store.items.push({
+		a: {
+			b: {
+				c: 1
+			}
+		}
+	});
+
+	setTimeout(() => {
+		store.flush = 5;
+	}, 1000);
+}, 1000);

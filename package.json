@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/panta82/smartstore#readme",
   "dependencies": {
-    "lodash.isstring": "^4.0.1"
+    "enumconsts": "^1.0.0"
   }
 }
