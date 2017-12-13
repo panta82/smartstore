@@ -4,7 +4,7 @@ const {SmartStore} = require('../lib/smart_store');
 
 describe('SmartStore', () => {
 	describe('sync', () => {
-		it('can work', () => {
+		it('works', () => {
 			const store = SmartStore.openSync('/tmp/test.store');
 			store.string = 'string';
 			store.number = 5;
@@ -22,7 +22,7 @@ describe('SmartStore', () => {
 	});
 
 	describe('async', () => {
-		it('can work', (done) => {
+		it('works', (done) => {
 			SmartStore.open('/tmp/test.store')
 				.then(store => {
 					store.string = 'string';
@@ -46,5 +46,13 @@ describe('SmartStore', () => {
 					done();
 				});
 		});
+	});
+
+	it('can iterate keys', () => {
+		const store = SmartStore.openSync('/tmp/test.store.' + Math.random());
+		store.a = store.b = store.c = 'data';
+
+		const keys = Object.keys(store);
+		expect(keys).to.eql(['c', 'b', 'a']);
 	});
 });
