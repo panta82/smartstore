@@ -39,7 +39,7 @@ There are many "simple store" projects out there. What makes this one different?
 ✓ Access data like any other POJO object (no getters/setters)  
 ✓ Persist only when touched / changed (no set interval)  
 ✓ Does not mutate objects that are placed into the store (so, no adding special accessor properties or stuff like that)  
-✕ Persist regex and date objects (on the TODO)  
+✓ Persist regex and date objects  
 ✓ Reasonably efficient (only writes when needed, caching)  
 
 #### Trade-offs
