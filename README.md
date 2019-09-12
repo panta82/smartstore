@@ -88,7 +88,11 @@ I will use SmartStore in a smallish personal project for now. It has sparse test
 
 Then again, if you had one of those, you'd probably use a real database anyway. 
 
+## Changelog
 
+|Version|Changes|
+|-------|-------|
+|0.2.1  |Fixed strict mode breakage|
 
 ### License
 
