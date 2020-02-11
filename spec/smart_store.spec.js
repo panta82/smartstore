@@ -22,6 +22,17 @@ describe('SmartStore', () => {
 			expect(store2.undef).to.be.undefined;
 		});
 
+		it('can handle unreachable db location', () => {
+			try {
+				SmartStore.openSync('/tmp/not/likely/to/exist/store.db');
+				throw "shouldn't reach here";
+			} catch (err) {
+				expect(err.message).to.equal(
+					"ENOENT: no such file or directory, open '/tmp/not/likely/to/exist/store.db'"
+				);
+			}
+		});
+
 		it('can check non-existent keys', () => {
 			const store = SmartStore.openSync('/tmp/test.store.' + Math.random());
 			expect(store.something).to.equal(undefined);
@@ -54,6 +65,18 @@ describe('SmartStore', () => {
 					expect(store.undef).to.be.undefined;
 
 					done();
+				});
+		});
+
+		it('can handle unreachable db location', () => {
+			return SmartStore.open('/tmp/not/likely/to/exist/store.db')
+				.then(() => {
+					throw "shouldn't reach here";
+				})
+				.catch(err => {
+					expect(err.message).to.equal(
+						"ENOENT: no such file or directory, open '/tmp/not/likely/to/exist/store.db'"
+					);
 				});
 		});
 	});

@@ -6,14 +6,13 @@ const {
 	NotOpenError,
 } = require('./lib/errors');
 
-SmartStore.SmartStore = SmartStore;
-
-SmartStore.Options = SmartStoreOptions;
-
-SmartStore.Error = SmartStoreError;
-SmartStore.OptionError = OptionError;
-SmartStore.ReservedPropertyError = ReservedPropertyError;
-SmartStore.NotOpenError = NotOpenError;
-
-/** @type {SmartStore} */
 module.exports = SmartStore;
+
+module.exports.SmartStore = SmartStore;
+
+module.exports.Options = SmartStoreOptions;
+
+module.exports.Error = SmartStoreError;
+module.exports.OptionError = OptionError;
+module.exports.ReservedPropertyError = ReservedPropertyError;
+module.exports.NotOpenError = NotOpenError;

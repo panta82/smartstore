@@ -93,6 +93,7 @@ Then again, if you had one of those, you'd probably use a real database anyway.
 |Version|Changes|
 |-------|-------|
 |0.2.1  |Fixed strict mode breakage|
+|0.3.0  |We are now checking that store db is accessible during init. Also fixed background flush bug where db location is not writeable. Added prettier. Better JSDocs.|
 
 ### License
 
