@@ -2,7 +2,7 @@
 
 const expect = require('chai').expect;
 
-const {SmartStore} = require('../lib/smart_store');
+const { SmartStore } = require('../lib/smart_store');
 
 describe('SmartStore', () => {
 	describe('sync', () => {
@@ -21,18 +21,18 @@ describe('SmartStore', () => {
 			expect(store2.null).to.be.null;
 			expect(store2.undef).to.be.undefined;
 		});
-    
-    it('can check non-existent keys', () => {
-      const store = SmartStore.openSync('/tmp/test.store.' + Math.random());
-      expect(store.something).to.equal(undefined);
-      
-      store.something = store.something || [];
-      expect(store.something).to.eql([]);
-    });
+
+		it('can check non-existent keys', () => {
+			const store = SmartStore.openSync('/tmp/test.store.' + Math.random());
+			expect(store.something).to.equal(undefined);
+
+			store.something = store.something || [];
+			expect(store.something).to.eql([]);
+		});
 	});
 
 	describe('async', () => {
-		it('works', (done) => {
+		it('works', done => {
 			SmartStore.open('/tmp/test.store')
 				.then(store => {
 					store.string = 'string';

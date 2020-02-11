@@ -7,7 +7,7 @@ describe('protocol', () => {
 		const date = new Date();
 
 		const str = protocol.serialize({
-			date
+			date,
 		});
 
 		const data = protocol.deserialize(str);
@@ -18,9 +18,9 @@ describe('protocol', () => {
 
 	it('can serialize regexes', () => {
 		const data = {
-			r1: /abc/img,
+			r1: /abc/gim,
 			r2: /test|with|or/,
-			r3: /|||||||||/i
+			r3: /|||||||||/i,
 		};
 
 		const data2 = protocol.deserialize(protocol.serialize(data));
@@ -35,9 +35,7 @@ describe('protocol', () => {
 
 	it('can escape tricky strings', () => {
 		const data = {
-			things: [
-				'|d|', '|a|', ' d', '|r| i|abc', '|r|| i|abc', '|r| ||i|abc', '|r||| |i|abc'
-			]
+			things: ['|d|', '|a|', ' d', '|r| i|abc', '|r|| i|abc', '|r| ||i|abc', '|r||| |i|abc'],
 		};
 
 		const data2 = protocol.deserialize(protocol.serialize(data));

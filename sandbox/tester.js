@@ -5,13 +5,13 @@ s1.openSync();
 
 const store = SmartStore.openSync({
 	path: '/tmp/store.dat',
-	log: console.log
+	log: console.log,
 });
 
 store.test = {
 	a: 'a',
 	b: new Date(),
-	c: /abc/i
+	c: /abc/i,
 };
 
 store.items = [];
@@ -20,9 +20,9 @@ setTimeout(() => {
 	store.items.push({
 		a: {
 			b: {
-				c: 1
-			}
-		}
+				c: 1,
+			},
+		},
 	});
 
 	setTimeout(() => {
