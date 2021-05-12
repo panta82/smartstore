@@ -1,6 +1,6 @@
 {
   "name": "smartstore",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Smart node.js store, with persistence.",
   "main": "index.js",
   "directories": {
